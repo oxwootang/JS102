@@ -19,3 +19,14 @@ for(key in animal){
     console.log("I like to say "+animal[key]);
   }
 };
+//Array
+var noiseArray = ['quack'];
+noiseArray.unshift('bark');
+noiseArray.push('meow');
+noiseArray[3] = 'bleh';
+console.log(noiseArray.length);
+console.log(noiseArray.length-1+" is the last index, and it is one less than the length of noiseArray: "+noiseArray.length);
+//Nest the Array in the Object
+console.log(animal);
+animal.noises = noiseArray;
+console.log(animal);
