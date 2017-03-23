@@ -41,4 +41,26 @@ var shelly = { username: 'Turtle', tagline: 'Hiiiiiiii...', noises: ['.....', 'h
 animals[animals.length] = longNeck;
 animals[animals.length] = shelly;
 console.log(animals);
-console.log(animals.length)
+console.log(animals.length);
+//Nesting
+//Create a friendslist
+var friends = [];
+var addUsername = function(){
+  var rAnimal = animals[Math.floor(Math.random()*animals.length)];
+  friends.push(rAnimal.username);
+  console.log(friends);
+};
+addUsername();
+addUsername();
+//Create a Relationships Object
+var relationships = {};
+relationships.friends = friends;
+console.log(relationships);
+relationships.matches = [];
+relationships.matches.push(relationships.friends[0]);
+console.log(relationships.matches);
+for(animal in animals){
+  console.log(animal);
+  animals[animal].relationships = relationships;
+};
+console.log(animals);
